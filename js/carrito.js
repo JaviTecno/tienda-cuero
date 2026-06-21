@@ -3,7 +3,12 @@
 // =============================================
 
 // Cargamos el carrito desde localStorage (para que persista entre páginas)
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let carrito = [];
+try {
+  carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+} catch(e) {
+  carrito = [];
+}
 
 // Al cargar la página, actualizamos el contador del menú
 // Nota: en carrito.html el renderizado lo gestiona carrito-pagina.js
