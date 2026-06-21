@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "catalogo": "Catálogo",
+    "contacto": "Contacto",
+    "carrito": "Carro"
+  },
+  "hero": {
+    "eyebrow": "Feito a man · Duradeiro · Único",
+    "titulo": "Artesanía en coiro para toda a vida",
+    "descripcion": "Cada peza está traballada a man con coiro natural de primeira calidade. Sen produción en serie, sen atallos.",
+    "boton": "Ver catálogo"
+  },
+  "productos": {
+    "titulo": "Produtos destacados",
+    "boton_ver_mas": "Ver todos os produtos",
+    "boton_añadir": "Engadir",
+    "desde": "Desde"
+  },
+  "filosofia": {
+    "eyebrow": "A nosa forma de traballar",
+    "titulo": "Cada peza, unha historia",
+    "texto": "Non facemos produción en serie. Cada artigo trabállase a man desde o primeiro corte ata o último punto. Usamos coiro natural que mellora co uso e o tempo — como debe ser.",
+    "boton": "Contactar"
+  },
+  "footer": {
+    "descripcion": "Artesanía en coiro feita a man. Con materiais naturais de primeira calidade.",
+    "tienda": "Tenda",
+    "informacion": "Información",
+    "envios": "Envíos e devolucións",
+    "aviso": "Aviso legal",
+    "pedidos": "Pedidos",
+    "derechos": "Todos os dereitos reservados"
+  },
+  "catalogo": {
+    "eyebrow": "Feito a man · Coiro natural",
+    "titulo": "Catálogo",
+    "filtrar": "Filtrar",
+    "categoria": "Categoría",
+    "todos": "Todos os produtos",
+    "carteras": "Carteiras",
+    "cinturones": "Cinguros",
+    "bolsos": "Bolsos",
+    "accesorios": "Accesorios",
+    "precio": "Prezo",
+    "todos_precios": "Todos os prezos",
+    "hasta_50": "Ata 50 €",
+    "50_100": "50 € — 100 €",
+    "mas_100": "Máis de 100 €",
+    "limpiar": "Limpar filtros",
+    "orden_defecto": "Orde por defecto",
+    "precio_asc": "Prezo: menor a maior",
+    "precio_desc": "Prezo: maior a menor",
+    "nombre_az": "Nome A–Z",
+    "sin_resultados": "Non hai produtos nesta categoría."
+  },
+  "producto": {
+    "eyebrow_carteras": "Carteiras",
+    "eyebrow_cinturones": "Cinguros",
+    "eyebrow_bolsos": "Bolsos",
+    "eyebrow_accesorios": "Accesorios",
+    "color": "Cor",
+    "cantidad": "Cantidade",
+    "añadir_carrito": "Engadir ao carro",
+    "materiales": "Materiais",
+    "dimensiones": "Dimensións",
+    "envios": "Envíos e devolucións",
+    "cuidados": "Coidados",
+    "relacionados": "Tamén che pode gustar"
+  },
+  "carrito": {
+    "eyebrow": "A túa selección",
+    "titulo": "Carro",
+    "vacio": "O teu carro está baleiro.",
+    "ver_catalogo": "Ver catálogo",
+    "resumen": "Resumo do pedido",
+    "subtotal": "Subtotal",
+    "envio": "Envío",
+    "gratis": "Gratis",
+    "total": "Total",
+    "como_pagar": "Como realizar o pagamento",
+    "bizum": "Bizum",
+    "transferencia": "Transferencia bancaria",
+    "nota_pago": "Unha vez confirmado o pagamento, recibirás un correo de confirmación nun prazo de 24h.",
+    "confirmar": "Confirmar pedido",
+    "seguir": "← Continuar comprando",
+    "unidad": "€ / unidade",
+    "eliminar": "Eliminar"
+  },
+  "contacto": {
+    "eyebrow": "Estamos aquí para axudarche",
+    "titulo": "Contacto",
+    "subtitulo": "Para pedidos personalizados, dúbidas sobre produtos ou calquera consulta.",
+    "nombre": "Nome",
+    "nombre_placeholder": "O teu nome",
+    "email": "Correo electrónico",
+    "asunto": "Asunto",
+    "asunto_placeholder": "Selecciona un asunto",
+    "asunto_pedido": "Información sobre un pedido",
+    "asunto_personalizado": "Produto personalizado",
+    "asunto_envio": "Consulta sobre envíos",
+    "asunto_otro": "Outro",
+    "mensaje": "Mensaxe",
+    "mensaje_placeholder": "Escribe a túa mensaxe aquí...",
+    "enviar": "Enviar mensaxe",
+    "confirmacion": "✓ Mensaxe enviada. Responderémosche en menos de 24h.",
+    "info_email": "Correo electrónico",
+    "info_telefono": "Teléfono / Bizum",
+    "horario": "Luns a venres, 9h–18h",
+    "info_pedidos": "Pedidos e pagamentos",
+    "texto_pedidos": "Aceptamos Bizum e transferencia bancaria. Unha vez confirmado o pagamento, preparamos o teu pedido en 1–2 días laborables.",
+    "info_envios": "Envíos",
+    "texto_envios": "Envío estándar en 3–5 días laborables. Gratis en pedidos superiores a 80 €.",
+    "info_encargos": "Encargos personalizados",
+    "texto_encargos": "Fabricamos pezas a medida. Cóntanos o que tes en mente e enviámosche orzamento sen compromiso."
+  },
+  "migas": {
+    "inicio": "Inicio",
+    "catalogo": "Catálogo"
+  }
+}

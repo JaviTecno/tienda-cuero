@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "catalogo": "Catálogo",
+    "contacto": "Contacto",
+    "carrito": "Carrito"
+  },
+  "hero": {
+    "eyebrow": "Hecho a mano · Duradero · Único",
+    "titulo": "Artesanía en cuero para toda la vida",
+    "descripcion": "Cada pieza está trabajada a mano con cuero natural de primera calidad. Sin producción en serie, sin atajos.",
+    "boton": "Ver catálogo"
+  },
+  "productos": {
+    "titulo": "Productos destacados",
+    "boton_ver_mas": "Ver todos los productos",
+    "boton_añadir": "Añadir",
+    "desde": "Desde"
+  },
+  "filosofia": {
+    "eyebrow": "Nuestra forma de trabajar",
+    "titulo": "Cada pieza, una historia",
+    "texto": "No hacemos producción en serie. Cada artículo se trabaja a mano desde el primer corte hasta el último punto. Usamos cuero natural que mejora con el uso y el tiempo — como debe ser.",
+    "boton": "Contactar"
+  },
+  "footer": {
+    "descripcion": "Artesanía en cuero hecha a mano. Con materiales naturales de primera calidad.",
+    "tienda": "Tienda",
+    "informacion": "Información",
+    "envios": "Envíos y devoluciones",
+    "aviso": "Aviso legal",
+    "pedidos": "Pedidos",
+    "derechos": "Todos los derechos reservados"
+  },
+  "catalogo": {
+    "eyebrow": "Hecho a mano · Cuero natural",
+    "titulo": "Catálogo",
+    "filtrar": "Filtrar",
+    "categoria": "Categoría",
+    "todos": "Todos los productos",
+    "carteras": "Carteras",
+    "cinturones": "Cinturones",
+    "bolsos": "Bolsos",
+    "accesorios": "Accesorios",
+    "precio": "Precio",
+    "todos_precios": "Todos los precios",
+    "hasta_50": "Hasta 50 €",
+    "50_100": "50 € — 100 €",
+    "mas_100": "Más de 100 €",
+    "limpiar": "Limpiar filtros",
+    "orden_defecto": "Orden por defecto",
+    "precio_asc": "Precio: menor a mayor",
+    "precio_desc": "Precio: mayor a menor",
+    "nombre_az": "Nombre A–Z",
+    "sin_resultados": "No hay productos en esta categoría."
+  },
+  "producto": {
+    "eyebrow_carteras": "Carteras",
+    "eyebrow_cinturones": "Cinturones",
+    "eyebrow_bolsos": "Bolsos",
+    "eyebrow_accesorios": "Accesorios",
+    "color": "Color",
+    "cantidad": "Cantidad",
+    "añadir_carrito": "Añadir al carrito",
+    "materiales": "Materiales",
+    "dimensiones": "Dimensiones",
+    "envios": "Envíos y devoluciones",
+    "cuidados": "Cuidados",
+    "relacionados": "También te puede gustar"
+  },
+  "carrito": {
+    "eyebrow": "Tu selección",
+    "titulo": "Carrito",
+    "vacio": "Tu carrito está vacío.",
+    "ver_catalogo": "Ver catálogo",
+    "resumen": "Resumen del pedido",
+    "subtotal": "Subtotal",
+    "envio": "Envío",
+    "gratis": "Gratis",
+    "total": "Total",
+    "como_pagar": "Cómo realizar el pago",
+    "bizum": "Bizum",
+    "transferencia": "Transferencia bancaria",
+    "nota_pago": "Una vez confirmado el pago, recibirás un email de confirmación en un plazo de 24h.",
+    "confirmar": "Confirmar pedido",
+    "seguir": "← Seguir comprando",
+    "unidad": "€ / unidad",
+    "eliminar": "Eliminar"
+  },
+  "contacto": {
+    "eyebrow": "Estamos aquí para ayudarte",
+    "titulo": "Contacto",
+    "subtitulo": "Para pedidos personalizados, dudas sobre productos o cualquier consulta.",
+    "nombre": "Nombre",
+    "nombre_placeholder": "Tu nombre",
+    "email": "Email",
+    "asunto": "Asunto",
+    "asunto_placeholder": "Selecciona un asunto",
+    "asunto_pedido": "Información sobre un pedido",
+    "asunto_personalizado": "Producto personalizado",
+    "asunto_envio": "Consulta sobre envíos",
+    "asunto_otro": "Otro",
+    "mensaje": "Mensaje",
+    "mensaje_placeholder": "Escribe tu mensaje aquí...",
+    "enviar": "Enviar mensaje",
+    "confirmacion": "✓ Mensaje enviado. Te responderemos en menos de 24h.",
+    "info_email": "Email",
+    "info_telefono": "Teléfono / Bizum",
+    "horario": "Lunes a viernes, 9h–18h",
+    "info_pedidos": "Pedidos y pagos",
+    "texto_pedidos": "Aceptamos Bizum y transferencia bancaria. Una vez confirmado el pago, preparamos tu pedido en 1–2 días laborables.",
+    "info_envios": "Envíos",
+    "texto_envios": "Envío estándar en 3–5 días laborables. Gratis en pedidos superiores a 80 €.",
+    "info_encargos": "Encargos personalizados",
+    "texto_encargos": "Fabricamos piezas a medida. Cuéntanos qué tienes en mente y te enviamos presupuesto sin compromiso."
+  },
+  "migas": {
+    "inicio": "Inicio",
+    "catalogo": "Catálogo"
+  }
+}

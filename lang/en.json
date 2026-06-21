@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "catalogo": "Shop",
+    "contacto": "Contact",
+    "carrito": "Cart"
+  },
+  "hero": {
+    "eyebrow": "Handmade · Durable · One of a kind",
+    "titulo": "Leather craftsmanship made to last a lifetime",
+    "descripcion": "Every piece is hand-crafted using premium natural leather. No mass production, no shortcuts.",
+    "boton": "Shop now"
+  },
+  "productos": {
+    "titulo": "Featured products",
+    "boton_ver_mas": "View all products",
+    "boton_añadir": "Add",
+    "desde": "From"
+  },
+  "filosofia": {
+    "eyebrow": "The way we work",
+    "titulo": "Every piece tells a story",
+    "texto": "We don't do mass production. Every item is worked by hand from the first cut to the last stitch. We use natural leather that improves with use and time — as it should be.",
+    "boton": "Get in touch"
+  },
+  "footer": {
+    "descripcion": "Handmade leather goods. Using premium natural materials.",
+    "tienda": "Shop",
+    "informacion": "Information",
+    "envios": "Shipping & returns",
+    "aviso": "Legal notice",
+    "pedidos": "Orders",
+    "derechos": "All rights reserved"
+  },
+  "catalogo": {
+    "eyebrow": "Handmade · Natural leather",
+    "titulo": "Shop",
+    "filtrar": "Filter",
+    "categoria": "Category",
+    "todos": "All products",
+    "carteras": "Wallets",
+    "cinturones": "Belts",
+    "bolsos": "Bags",
+    "accesorios": "Accessories",
+    "precio": "Price",
+    "todos_precios": "All prices",
+    "hasta_50": "Up to €50",
+    "50_100": "€50 — €100",
+    "mas_100": "Over €100",
+    "limpiar": "Clear filters",
+    "orden_defecto": "Default order",
+    "precio_asc": "Price: low to high",
+    "precio_desc": "Price: high to low",
+    "nombre_az": "Name A–Z",
+    "sin_resultados": "No products found in this category."
+  },
+  "producto": {
+    "eyebrow_carteras": "Wallets",
+    "eyebrow_cinturones": "Belts",
+    "eyebrow_bolsos": "Bags",
+    "eyebrow_accesorios": "Accessories",
+    "color": "Colour",
+    "cantidad": "Quantity",
+    "añadir_carrito": "Add to cart",
+    "materiales": "Materials",
+    "dimensiones": "Dimensions",
+    "envios": "Shipping & returns",
+    "cuidados": "Care instructions",
+    "relacionados": "You might also like"
+  },
+  "carrito": {
+    "eyebrow": "Your selection",
+    "titulo": "Cart",
+    "vacio": "Your cart is empty.",
+    "ver_catalogo": "Browse the shop",
+    "resumen": "Order summary",
+    "subtotal": "Subtotal",
+    "envio": "Shipping",
+    "gratis": "Free",
+    "total": "Total",
+    "como_pagar": "How to pay",
+    "bizum": "Bizum",
+    "transferencia": "Bank transfer",
+    "nota_pago": "Once payment is confirmed, you will receive a confirmation email within 24 hours.",
+    "confirmar": "Confirm order",
+    "seguir": "← Continue shopping",
+    "unidad": "€ / unit",
+    "eliminar": "Remove"
+  },
+  "contacto": {
+    "eyebrow": "We are here to help",
+    "titulo": "Contact",
+    "subtitulo": "For custom orders, product questions or any other enquiry.",
+    "nombre": "Name",
+    "nombre_placeholder": "Your name",
+    "email": "Email",
+    "asunto": "Subject",
+    "asunto_placeholder": "Select a subject",
+    "asunto_pedido": "Order enquiry",
+    "asunto_personalizado": "Custom product",
+    "asunto_envio": "Shipping question",
+    "asunto_otro": "Other",
+    "mensaje": "Message",
+    "mensaje_placeholder": "Write your message here...",
+    "enviar": "Send message",
+    "confirmacion": "✓ Message sent. We will get back to you within 24 hours.",
+    "info_email": "Email",
+    "info_telefono": "Phone / Bizum",
+    "horario": "Monday to Friday, 9am–6pm",
+    "info_pedidos": "Orders & payments",
+    "texto_pedidos": "We accept Bizum and bank transfer. Once payment is confirmed, we prepare your order within 1–2 working days.",
+    "info_envios": "Shipping",
+    "texto_envios": "Standard delivery in 3–5 working days. Free shipping on orders over €80.",
+    "info_encargos": "Custom orders",
+    "texto_encargos": "We make bespoke pieces. Tell us what you have in mind and we will send you a no-obligation quote."
+  },
+  "migas": {
+    "inicio": "Home",
+    "catalogo": "Shop"
+  }
+}

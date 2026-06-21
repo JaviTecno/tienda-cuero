@@ -102,6 +102,38 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* =============================================
+   SELECTOR DE IDIOMA
+   ============================================= */
+.selector-idioma {
+  display: flex;
+  gap: 4px;
+}
+
+.idioma-btn {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--color-texto-suave);
+  font-size: 12px;
+  font-family: var(--fuente-cuerpo);
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: all var(--transicion);
+}
+
+.idioma-btn:hover {
+  color: var(--color-cuero);
+  border-color: var(--color-borde);
+}
+
+.idioma-btn.activo {
+  color: var(--color-cuero-oscuro);
+  border-color: var(--color-cuero);
+  font-weight: 600;
+}
+
+/* =============================================
    HERO
    ============================================= */
 .hero {

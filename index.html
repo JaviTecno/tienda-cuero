@@ -13,30 +13,35 @@
     <div class="cabecera-interior">
       <a href="index.html" class="logo">CUERO & ARTE</a>
       <nav class="navegacion">
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         <a href="carrito.html" class="icono-carrito">
-          Carrito (<span id="contador-carrito">0</span>)
+          <span data-i18n="nav.carrito">Carrito</span> (<span id="contador-carrito">0</span>)
         </a>
       </nav>
+      <div class="selector-idioma">
+        <button class="idioma-btn" data-idioma="es" onclick="cambiarIdioma('es')">ES</button>
+        <button class="idioma-btn" data-idioma="gl" onclick="cambiarIdioma('gl')">GL</button>
+        <button class="idioma-btn" data-idioma="en" onclick="cambiarIdioma('en')">EN</button>
+      </div>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-contenido">
-      <p class="hero-eyebrow">Hecho a mano · Duradero · Único</p>
-      <h1>Artesanía en cuero<br>para toda la vida</h1>
-      <p class="hero-descripcion">Cada pieza está trabajada a mano con cuero natural de primera calidad. Sin producción en serie, sin atajos.</p>
-      <a href="catalogo.html" class="boton-principal">Ver catálogo</a>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Hecho a mano · Duradero · Único</p>
+      <h1 data-i18n="hero.titulo">Artesanía en cuero<br>para toda la vida</h1>
+      <p class="hero-descripcion" data-i18n="hero.descripcion">Cada pieza está trabajada a mano con cuero natural de primera calidad. Sin producción en serie, sin atajos.</p>
+      <a href="catalogo.html" class="boton-principal" data-i18n="hero.boton">Ver catálogo</a>
     </div>
   </section>
 
   <!-- PRODUCTOS DESTACADOS -->
   <section class="seccion-productos">
     <div class="contenedor">
-      <h2 class="seccion-titulo">Productos destacados</h2>
+      <h2 class="seccion-titulo" data-i18n="productos.titulo">Productos destacados</h2>
       <div class="cuadricula-productos">
 
         <article class="tarjeta-producto">
@@ -48,7 +53,7 @@
             <p class="tarjeta-descripcion">Cuero vacuno curtido al vegetal. Interior con 6 compartimentos para tarjetas.</p>
             <div class="tarjeta-pie">
               <span class="precio">45,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Cartera clásica', 45)">Añadir</button>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cartera clásica', 45)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
@@ -62,7 +67,7 @@
             <p class="tarjeta-descripcion">Cuero de 4mm de grosor. Hebilla de latón. Disponible en varios colores.</p>
             <div class="tarjeta-pie">
               <span class="precio">65,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón artesanal', 65)">Añadir</button>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón artesanal', 65)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
@@ -76,7 +81,7 @@
             <p class="tarjeta-descripcion">Amplio y resistente. Cosido a mano con hilo encerado. Asa larga y corta.</p>
             <div class="tarjeta-pie">
               <span class="precio">120,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Bolso tote', 120)">Añadir</button>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Bolso tote', 120)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
@@ -90,14 +95,14 @@
             <p class="tarjeta-descripcion">Protege tu cuaderno con estilo. Con bolsillo interior y cierre de botón.</p>
             <div class="tarjeta-pie">
               <span class="precio">38,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Funda cuaderno A5', 38)">Añadir</button>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Funda cuaderno A5', 38)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
 
       </div>
       <div class="ver-mas">
-        <a href="catalogo.html" class="boton-secundario">Ver todos los productos</a>
+        <a href="catalogo.html" class="boton-secundario" data-i18n="productos.boton_ver_mas">Ver todos los productos</a>
       </div>
     </div>
   </section>
@@ -106,10 +111,10 @@
   <section class="seccion-filosofia">
     <div class="contenedor filosofia-interior">
       <div class="filosofia-texto">
-        <p class="eyebrow">Nuestra forma de trabajar</p>
-        <h2>Cada pieza, una historia</h2>
-        <p>No hacemos producción en serie. Cada artículo se trabaja a mano desde el primer corte hasta el último punto. Usamos cuero natural que mejora con el uso y el tiempo — como debe ser.</p>
-        <a href="contacto.html" class="boton-secundario">Contactar</a>
+        <p class="eyebrow" data-i18n="filosofia.eyebrow">Nuestra forma de trabajar</p>
+        <h2 data-i18n="filosofia.titulo">Cada pieza, una historia</h2>
+        <p data-i18n="filosofia.texto">No hacemos producción en serie. Cada artículo se trabaja a mano desde el primer corte hasta el último punto. Usamos cuero natural que mejora con el uso y el tiempo — como debe ser.</p>
+        <a href="contacto.html" class="boton-secundario" data-i18n="filosofia.boton">Contactar</a>
       </div>
       <div class="filosofia-imagen">
         <div class="placeholder-imagen-grande"></div>
@@ -122,31 +127,31 @@
     <div class="contenedor footer-interior">
       <div class="footer-marca">
         <span class="logo">CUERO & ARTE</span>
-        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+        <p data-i18n="footer.descripcion">Artesanía en cuero hecha a mano. Con materiales naturales de primera calidad.</p>
       </div>
       <div class="footer-enlaces">
-        <h4>Tienda</h4>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="carrito.html">Carrito</a>
+        <h4 data-i18n="footer.tienda">Tienda</h4>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="carrito.html" data-i18n="nav.carrito">Carrito</a>
       </div>
       <div class="footer-enlaces">
-        <h4>Información</h4>
-        <a href="contacto.html">Contacto</a>
-        <a href="#">Envíos y devoluciones</a>
-        <a href="#">Aviso legal</a>
+        <h4 data-i18n="footer.informacion">Información</h4>
+        <a href="contacto.html" data-i18n="footer.envios">Envíos y devoluciones</a>
+        <a href="#" data-i18n="footer.aviso">Aviso legal</a>
       </div>
       <div class="footer-contacto">
-        <h4>Pedidos</h4>
+        <h4 data-i18n="footer.pedidos">Pedidos</h4>
         <p>Bizum: <strong>666 000 000</strong></p>
         <p>info@cueroyarte.es</p>
       </div>
     </div>
     <div class="footer-copy">
-      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+      <p>© 2026 Cuero & Arte · <span data-i18n="footer.derechos">Todos los derechos reservados</span></p>
     </div>
   </footer>
 
   <script src="js/carrito.js"></script>
+  <script src="js/idiomas.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
