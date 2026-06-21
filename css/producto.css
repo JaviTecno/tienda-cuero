@@ -1,0 +1,255 @@
+/* =============================================
+   PRODUCTO — Estilos específicos
+   ============================================= */
+
+/* MIGAS DE PAN */
+.migas {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 13px;
+  color: var(--color-texto-suave);
+}
+
+.migas a {
+  color: var(--color-texto-suave);
+  transition: color var(--transicion);
+}
+
+.migas a:hover { color: var(--color-cuero); }
+
+.migas span { margin: 0 8px; }
+
+/* FICHA PRINCIPAL */
+.ficha-producto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding-top: 48px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+
+/* GALERÍA */
+.galeria-principal {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria-principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+}
+
+.galeria-miniaturas {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.miniatura {
+  width: 72px;
+  height: 72px;
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--transicion);
+}
+
+.miniatura:hover,
+.miniatura.activa {
+  border-color: var(--color-cuero);
+}
+
+.miniatura-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+/* INFO DEL PRODUCTO */
+.producto-categoria {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-cuero);
+  margin-bottom: 10px;
+}
+
+.producto-nombre {
+  font-family: var(--fuente-display);
+  font-size: 36px;
+  font-weight: normal;
+  color: var(--color-cuero-oscuro);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.producto-precio {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-cuero-oscuro);
+  margin-bottom: 24px;
+}
+
+.producto-descripcion {
+  font-size: 15px;
+  color: var(--color-texto-suave);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* SELECTORES */
+.selector-grupo {
+  margin-bottom: 24px;
+}
+
+.selector-etiqueta {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.selector-etiqueta strong {
+  color: var(--color-texto);
+}
+
+/* Selector de color */
+.colores {
+  display: flex;
+  gap: 10px;
+}
+
+.color-opcion {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--transicion), transform var(--transicion);
+  outline: 2px solid transparent;
+}
+
+.color-opcion:hover {
+  transform: scale(1.1);
+}
+
+.color-opcion.activo {
+  outline: 2px solid var(--color-cuero);
+  outline-offset: 3px;
+}
+
+/* Selector de cantidad */
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  width: fit-content;
+}
+
+.cantidad-control button {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-texto-suave);
+  transition: color var(--transicion);
+}
+
+.cantidad-control button:hover { color: var(--color-cuero); }
+
+.cantidad-control span {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-left: 1px solid var(--color-borde);
+  border-right: 1px solid var(--color-borde);
+  line-height: 40px;
+}
+
+/* BOTÓN COMPRAR */
+.boton-comprar {
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+/* DETALLES DESPLEGABLES */
+.producto-detalles {
+  border-top: 1px solid var(--color-borde);
+}
+
+.detalle-item {
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.detalle-item summary {
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-texto);
+}
+
+.detalle-item summary::after {
+  content: '+';
+  font-size: 18px;
+  color: var(--color-cuero);
+  transition: transform var(--transicion);
+}
+
+.detalle-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.detalle-item p {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  line-height: 1.7;
+  padding-bottom: 16px;
+}
+
+/* PRODUCTOS RELACIONADOS */
+.seccion-relacionados {
+  background-color: var(--color-superficie);
+  border-top: 1px solid var(--color-borde);
+  padding: 64px 0;
+}
+
+.cuadricula-3 {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ficha-producto {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cuadricula-3 {
+    grid-template-columns: 1fr !important;
+  }
+}

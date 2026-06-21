@@ -1,0 +1,156 @@
+/* =============================================
+   CONTACTO — Estilos específicos
+   ============================================= */
+
+.contacto-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  padding-top: 48px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+
+/* ---- FORMULARIO ---- */
+.contacto-form-wrap h2 {
+  font-family: var(--fuente-display);
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--color-cuero-oscuro);
+  margin-bottom: 8px;
+}
+
+.contacto-subtitulo {
+  font-size: 15px;
+  color: var(--color-texto-suave);
+  margin-bottom: 36px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-texto);
+  letter-spacing: 0.02em;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  transition: border-color var(--transicion);
+  outline: none;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--color-cuero);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: var(--color-borde);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.campo select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B5E52' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+/* Confirmación del formulario */
+.form-confirmacion {
+  font-size: 14px;
+  color: #2E6B3E;
+  background-color: #EAF5ED;
+  border: 1px solid #B8DEC2;
+  padding: 14px 18px;
+  border-radius: var(--radio);
+}
+
+/* ---- SIDEBAR DE INFO ---- */
+.contacto-info {
+  position: sticky;
+  top: 90px;
+}
+
+.info-bloque {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.info-bloque:first-child {
+  padding-top: 0;
+}
+
+.info-bloque h3 {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-cuero);
+  margin-bottom: 8px;
+}
+
+.info-bloque p {
+  font-size: 14px;
+  color: var(--color-texto-suave);
+  line-height: 1.7;
+}
+
+.info-bloque a {
+  color: var(--color-cuero-oscuro);
+  text-decoration: underline;
+  transition: color var(--transicion);
+}
+
+.info-bloque a:hover { color: var(--color-cuero); }
+
+.info-nota {
+  font-size: 12px !important;
+  margin-top: 4px;
+  color: var(--color-borde) !important;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .contacto-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contacto-info { position: static; }
+
+  .campo-doble { grid-template-columns: 1fr; }
+}

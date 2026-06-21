@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartera clásica — Artesanía en Cuero</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/producto.css">
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="cabecera-interior">
+      <a href="index.html" class="logo">CUERO & ARTE</a>
+      <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="carrito.html" class="icono-carrito">
+          Carrito (<span id="contador-carrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MIGAS DE PAN -->
+  <div class="migas">
+    <div class="contenedor">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <a href="catalogo.html">Catálogo</a>
+      <span>›</span>
+      <span>Cartera clásica</span>
+    </div>
+  </div>
+
+  <!-- FICHA DE PRODUCTO -->
+  <section class="contenedor ficha-producto">
+
+    <!-- GALERÍA DE IMÁGENES -->
+    <div class="galeria">
+      <div class="galeria-principal">
+        <img id="imagen-principal" src="img/productos/producto-1.jpg" alt="Cartera clásica" onerror="this.style.background='#C4A882'; this.style.minHeight='400px'">
+      </div>
+      <div class="galeria-miniaturas">
+        <div class="miniatura activa" onclick="cambiarImagen(this, 'img/productos/producto-1.jpg')">
+          <div class="miniatura-placeholder" style="background:#C4A882"></div>
+        </div>
+        <div class="miniatura" onclick="cambiarImagen(this, 'img/productos/producto-1b.jpg')">
+          <div class="miniatura-placeholder" style="background:#A07850"></div>
+        </div>
+        <div class="miniatura" onclick="cambiarImagen(this, 'img/productos/producto-1c.jpg')">
+          <div class="miniatura-placeholder" style="background:#8B6344"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFORMACIÓN DEL PRODUCTO -->
+    <div class="producto-info">
+      <p class="producto-categoria">Carteras</p>
+      <h1 class="producto-nombre">Cartera clásica</h1>
+      <p class="producto-precio">45,00 €</p>
+
+      <p class="producto-descripcion">
+        Cartera de cuero vacuno curtido al vegetal. Fabricada a mano con técnicas tradicionales. El cuero natural mejora con el uso y desarrolla una pátina única con el tiempo.
+      </p>
+
+      <!-- SELECTOR DE COLOR -->
+      <div class="selector-grupo">
+        <p class="selector-etiqueta">Color: <strong id="color-seleccionado">Marrón natural</strong></p>
+        <div class="colores">
+          <button class="color-opcion activo" style="background:#8B6344" title="Marrón natural"
+            onclick="seleccionarColor(this, 'Marrón natural')"></button>
+          <button class="color-opcion" style="background:#2C2C2C" title="Negro"
+            onclick="seleccionarColor(this, 'Negro')"></button>
+          <button class="color-opcion" style="background:#6B3A2A" title="Burdeos"
+            onclick="seleccionarColor(this, 'Burdeos')"></button>
+        </div>
+      </div>
+
+      <!-- SELECTOR DE CANTIDAD -->
+      <div class="selector-grupo">
+        <p class="selector-etiqueta">Cantidad</p>
+        <div class="cantidad-control">
+          <button onclick="cambiarCantidad(-1)">−</button>
+          <span id="cantidad">1</span>
+          <button onclick="cambiarCantidad(1)">+</button>
+        </div>
+      </div>
+
+      <!-- BOTÓN AÑADIR AL CARRITO -->
+      <button class="boton-principal boton-comprar" onclick="añadirProducto()">
+        Añadir al carrito
+      </button>
+
+      <!-- DETALLES -->
+      <div class="producto-detalles">
+        <details class="detalle-item">
+          <summary>Materiales</summary>
+          <p>Cuero vacuno curtido al vegetal de origen europeo. Hilo encerado 100% algodón. Hebillas de latón macizo.</p>
+        </details>
+        <details class="detalle-item">
+          <summary>Dimensiones</summary>
+          <p>19 cm × 9,5 cm cerrada. Grosor: 1,5 cm. Peso: 85 g.</p>
+        </details>
+        <details class="detalle-item">
+          <summary>Envíos y devoluciones</summary>
+          <p>Envío en 3–5 días laborables. Devoluciones aceptadas en 14 días desde la recepción del pedido.</p>
+        </details>
+        <details class="detalle-item">
+          <summary>Cuidados</summary>
+          <p>Aplicar cera de cuero cada 6 meses. Evitar la humedad prolongada. El cuero natural patina con el uso — eso es buena señal.</p>
+        </details>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PRODUCTOS RELACIONADOS -->
+  <section class="seccion-relacionados">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">También te puede gustar</h2>
+      <div class="cuadricula-productos cuadricula-3">
+
+        <article class="tarjeta-producto">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-5.jpg" alt="Tarjetero slim" onerror="this.style.background='#B8936A'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Carteras</p>
+            <h3><a href="producto.html">Tarjetero slim</a></h3>
+            <div class="tarjeta-pie">
+              <span class="precio">55,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Tarjetero slim', 55)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-2.jpg" alt="Cinturón artesanal" onerror="this.style.background='#8B6F47'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Cinturones</p>
+            <h3><a href="producto.html">Cinturón artesanal</a></h3>
+            <div class="tarjeta-pie">
+              <span class="precio">65,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón artesanal', 65)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-7.jpg" alt="Llavero artesanal" onerror="this.style.background='#C9A87C'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Accesorios</p>
+            <h3><a href="producto.html">Llavero artesanal</a></h3>
+            <div class="tarjeta-pie">
+              <span class="precio">28,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Llavero artesanal', 28)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="contenedor footer-interior">
+      <div class="footer-marca">
+        <span class="logo">CUERO & ARTE</span>
+        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+      </div>
+      <div class="footer-enlaces">
+        <h4>Tienda</h4>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="carrito.html">Carrito</a>
+      </div>
+      <div class="footer-enlaces">
+        <h4>Información</h4>
+        <a href="contacto.html">Contacto</a>
+        <a href="#">Envíos y devoluciones</a>
+        <a href="#">Aviso legal</a>
+      </div>
+      <div class="footer-contacto">
+        <h4>Pedidos</h4>
+        <p>Bizum: <strong>666 000 000</strong></p>
+        <p>info@cueroyarte.es</p>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/carrito.js"></script>
+  <script src="js/producto.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

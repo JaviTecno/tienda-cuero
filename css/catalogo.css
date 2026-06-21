@@ -1,0 +1,166 @@
+/* =============================================
+   CATÁLOGO — Estilos específicos
+   ============================================= */
+
+.pagina-hero {
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  padding: 48px 0;
+}
+
+.pagina-hero h1 {
+  font-family: var(--fuente-display);
+  font-size: 42px;
+  font-weight: normal;
+  color: var(--color-cuero-oscuro);
+  margin-top: 8px;
+}
+
+/* Layout de dos columnas: sidebar + productos */
+.catalogo-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  padding-top: 48px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar-filtros {
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar-filtros h2 {
+  font-family: var(--fuente-display);
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--color-cuero-oscuro);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.grupo-filtro {
+  margin-bottom: 28px;
+}
+
+.grupo-filtro h3 {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+  margin-bottom: 12px;
+}
+
+.filtro-opcion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-texto-suave);
+  transition: color var(--transicion);
+}
+
+.filtro-opcion:hover { color: var(--color-cuero); }
+
+.filtro-opcion input[type="radio"] {
+  accent-color: var(--color-cuero);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.boton-limpiar {
+  background: none;
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto-suave);
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: all var(--transicion);
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+
+.boton-limpiar:hover {
+  border-color: var(--color-cuero);
+  color: var(--color-cuero);
+}
+
+/* ---- BARRA SUPERIOR ---- */
+.catalogo-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.catalogo-resultado {
+  font-size: 14px;
+  color: var(--color-texto-suave);
+}
+
+.catalogo-orden {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: var(--radio);
+  cursor: pointer;
+  outline: none;
+}
+
+.catalogo-orden:focus {
+  border-color: var(--color-cuero);
+}
+
+/* ---- CATEGORÍA EN TARJETA ---- */
+.tarjeta-categoria {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cuero);
+  margin-bottom: 4px;
+}
+
+.tarjeta-info h3 a {
+  color: var(--color-cuero-oscuro);
+  transition: color var(--transicion);
+}
+
+.tarjeta-info h3 a:hover { color: var(--color-cuero); }
+
+/* ---- SIN RESULTADOS ---- */
+.sin-resultados {
+  text-align: center;
+  padding: 64px 0;
+  color: var(--color-texto-suave);
+  font-size: 16px;
+  grid-column: 1 / -1;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .catalogo-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sidebar-filtros {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .sidebar-filtros h2 { width: 100%; }
+  .grupo-filtro { margin-bottom: 0; min-width: 140px; }
+}

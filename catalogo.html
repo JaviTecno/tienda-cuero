@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo — Artesanía en Cuero</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="cabecera-interior">
+      <a href="index.html" class="logo">CUERO & ARTE</a>
+      <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="carrito.html" class="icono-carrito">
+          Carrito (<span id="contador-carrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CABECERA DE PÁGINA -->
+  <section class="pagina-hero">
+    <div class="contenedor">
+      <p class="eyebrow">Hecho a mano · Cuero natural</p>
+      <h1>Catálogo</h1>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="contenedor catalogo-layout">
+
+    <!-- SIDEBAR DE FILTROS -->
+    <aside class="sidebar-filtros">
+      <h2>Filtrar</h2>
+
+      <div class="grupo-filtro">
+        <h3>Categoría</h3>
+        <label class="filtro-opcion">
+          <input type="radio" name="categoria" value="todos" checked>
+          <span>Todos los productos</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="categoria" value="carteras">
+          <span>Carteras</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="categoria" value="cinturones">
+          <span>Cinturones</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="categoria" value="bolsos">
+          <span>Bolsos</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="categoria" value="accesorios">
+          <span>Accesorios</span>
+        </label>
+      </div>
+
+      <div class="grupo-filtro">
+        <h3>Precio</h3>
+        <label class="filtro-opcion">
+          <input type="radio" name="precio" value="todos" checked>
+          <span>Todos los precios</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="precio" value="0-50">
+          <span>Hasta 50 €</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="precio" value="50-100">
+          <span>50 € — 100 €</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="precio" value="100+">
+          <span>Más de 100 €</span>
+        </label>
+      </div>
+
+      <button class="boton-limpiar" onclick="limpiarFiltros()">Limpiar filtros</button>
+    </aside>
+
+    <!-- CUADRÍCULA DE PRODUCTOS -->
+    <main class="catalogo-main">
+
+      <div class="catalogo-barra">
+        <p class="catalogo-resultado"><span id="num-productos">8</span> productos</p>
+        <select class="catalogo-orden" onchange="ordenarProductos(this.value)">
+          <option value="defecto">Orden por defecto</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre A–Z</option>
+        </select>
+      </div>
+
+      <div class="cuadricula-productos" id="cuadricula">
+
+        <article class="tarjeta-producto" data-categoria="carteras" data-precio="45">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-1.jpg" alt="Cartera clásica" onerror="this.style.background='#C4A882'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Carteras</p>
+            <h3><a href="producto.html">Cartera clásica</a></h3>
+            <p class="tarjeta-descripcion">Cuero vacuno curtido al vegetal. Interior con 6 compartimentos para tarjetas.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">45,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cartera clásica', 45)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="cinturones" data-precio="65">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-2.jpg" alt="Cinturón artesanal" onerror="this.style.background='#8B6F47'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Cinturones</p>
+            <h3><a href="producto.html">Cinturón artesanal</a></h3>
+            <p class="tarjeta-descripcion">Cuero de 4mm de grosor. Hebilla de latón. Disponible en varios colores.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">65,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón artesanal', 65)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="bolsos" data-precio="120">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-3.jpg" alt="Bolso tote" onerror="this.style.background='#6B4F3A'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Bolsos</p>
+            <h3><a href="producto.html">Bolso tote</a></h3>
+            <p class="tarjeta-descripcion">Amplio y resistente. Cosido a mano con hilo encerado. Asa larga y corta.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">120,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Bolso tote', 120)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="accesorios" data-precio="38">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-4.jpg" alt="Funda cuaderno" onerror="this.style.background='#A07850'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Accesorios</p>
+            <h3><a href="producto.html">Funda cuaderno A5</a></h3>
+            <p class="tarjeta-descripcion">Protege tu cuaderno con estilo. Con bolsillo interior y cierre de botón.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">38,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Funda cuaderno A5', 38)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="carteras" data-precio="55">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-5.jpg" alt="Tarjetero" onerror="this.style.background='#B8936A'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Carteras</p>
+            <h3><a href="producto.html">Tarjetero slim</a></h3>
+            <p class="tarjeta-descripcion">Minimalista y elegante. Cabe en cualquier bolsillo. Hasta 8 tarjetas.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">55,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Tarjetero slim', 55)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="bolsos" data-precio="95">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-6.jpg" alt="Bolso bandolera" onerror="this.style.background='#7A5C3E'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Bolsos</p>
+            <h3><a href="producto.html">Bandolera pequeña</a></h3>
+            <p class="tarjeta-descripcion">Compacta y versátil. Correa regulable. Cierre con hebilla de latón.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">95,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Bandolera pequeña', 95)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="accesorios" data-precio="28">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-7.jpg" alt="Llavero" onerror="this.style.background='#C9A87C'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Accesorios</p>
+            <h3><a href="producto.html">Llavero artesanal</a></h3>
+            <p class="tarjeta-descripcion">Pequeño detalle, gran calidad. Cuero grueso con anilla de acero inoxidable.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">28,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Llavero artesanal', 28)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="cinturones" data-precio="78">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/producto-8.jpg" alt="Cinturón trenzado" onerror="this.style.background='#9B7355'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria">Cinturones</p>
+            <h3><a href="producto.html">Cinturón trenzado</a></h3>
+            <p class="tarjeta-descripcion">Técnica de trenzado hecha a mano. Resistente y con carácter propio.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">78,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón trenzado', 78)">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Mensaje cuando no hay resultados -->
+      <div class="sin-resultados" id="sin-resultados" style="display:none;">
+        <p>No hay productos en esta categoría.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="contenedor footer-interior">
+      <div class="footer-marca">
+        <span class="logo">CUERO & ARTE</span>
+        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+      </div>
+      <div class="footer-enlaces">
+        <h4>Tienda</h4>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="carrito.html">Carrito</a>
+      </div>
+      <div class="footer-enlaces">
+        <h4>Información</h4>
+        <a href="contacto.html">Contacto</a>
+        <a href="#">Envíos y devoluciones</a>
+        <a href="#">Aviso legal</a>
+      </div>
+      <div class="footer-contacto">
+        <h4>Pedidos</h4>
+        <p>Bizum: <strong>666 000 000</strong></p>
+        <p>info@cueroyarte.es</p>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/carrito.js"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

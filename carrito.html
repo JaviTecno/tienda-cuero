@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito — Artesanía en Cuero</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="cabecera-interior">
+      <a href="index.html" class="logo">CUERO & ARTE</a>
+      <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="carrito.html" class="icono-carrito">
+          Carrito (<span id="contador-carrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CABECERA DE PÁGINA -->
+  <section class="pagina-hero">
+    <div class="contenedor">
+      <p class="eyebrow">Tu selección</p>
+      <h1>Carrito</h1>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <div class="contenedor carrito-layout">
+
+    <!-- LISTA DE PRODUCTOS -->
+    <main class="carrito-main">
+
+      <!-- Estado vacío -->
+      <div class="carrito-vacio" id="carrito-vacio">
+        <p>Tu carrito está vacío.</p>
+        <a href="catalogo.html" class="boton-principal">Ver catálogo</a>
+      </div>
+
+      <!-- Lista de productos (se rellena con JS) -->
+      <div id="lista-carrito"></div>
+
+    </main>
+
+    <!-- RESUMEN Y PAGO -->
+    <aside class="carrito-resumen" id="carrito-resumen">
+      <h2>Resumen del pedido</h2>
+
+      <div class="resumen-linea">
+        <span>Subtotal</span>
+        <span id="subtotal">0,00 €</span>
+      </div>
+      <div class="resumen-linea">
+        <span>Envío</span>
+        <span id="envio">Gratis</span>
+      </div>
+      <div class="resumen-linea resumen-total">
+        <span>Total</span>
+        <span id="total">0,00 €</span>
+      </div>
+
+      <div class="pago-instrucciones">
+        <p class="pago-titulo">Cómo realizar el pago</p>
+        <div class="pago-opcion">
+          <p class="pago-metodo">Bizum</p>
+          <p>Envía el importe al número <strong>666 000 000</strong> indicando tu nombre y el número de pedido.</p>
+        </div>
+        <div class="pago-opcion">
+          <p class="pago-metodo">Transferencia bancaria</p>
+          <p>IBAN: <strong>ES12 3456 7890 1234 5678 9012</strong><br>Titular: Cuero & Arte S.L.</p>
+        </div>
+        <p class="pago-nota">Una vez confirmado el pago, recibirás un email de confirmación en un plazo de 24h.</p>
+      </div>
+
+      <button class="boton-principal boton-confirmar" onclick="confirmarPedido()">
+        Confirmar pedido
+      </button>
+
+      <a href="catalogo.html" class="seguir-comprando">← Seguir comprando</a>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="contenedor footer-interior">
+      <div class="footer-marca">
+        <span class="logo">CUERO & ARTE</span>
+        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+      </div>
+      <div class="footer-enlaces">
+        <h4>Tienda</h4>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="carrito.html">Carrito</a>
+      </div>
+      <div class="footer-enlaces">
+        <h4>Información</h4>
+        <a href="contacto.html">Contacto</a>
+        <a href="#">Envíos y devoluciones</a>
+        <a href="#">Aviso legal</a>
+      </div>
+      <div class="footer-contacto">
+        <h4>Pedidos</h4>
+        <p>Bizum: <strong>666 000 000</strong></p>
+        <p>info@cueroyarte.es</p>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/carrito.js"></script>
+  <script src="js/carrito-pagina.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
