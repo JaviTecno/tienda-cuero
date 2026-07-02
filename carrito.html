@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito — Artesanía en Cuero</title>
+  <title>Carrito — Antika</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/carrito.css">
@@ -14,24 +14,29 @@
   <header class="cabecera">
     <div class="cabecera-interior">
       <a href="index.html">
-        <img src="img/general/ANTIKA_logo.svg" alt="Cuero & Arte" height="40">
+        <img src="img/general/ANTIKA_logo.svg" alt="Antika" height="40">
       </a>
       <nav class="navegacion">
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         <a href="carrito.html" class="icono-carrito">
-          Carrito (<span id="contador-carrito">0</span>)
+          <span data-i18n="nav.carrito">Carrito</span> (<span id="contador-carrito">0</span>)
         </a>
       </nav>
+      <div class="selector-idioma">
+        <button class="idioma-btn" data-idioma="es" onclick="cambiarIdioma('es')">ES</button>
+        <button class="idioma-btn" data-idioma="gl" onclick="cambiarIdioma('gl')">GL</button>
+        <button class="idioma-btn" data-idioma="en" onclick="cambiarIdioma('en')">EN</button>
+      </div>
     </div>
   </header>
 
   <!-- CABECERA DE PÁGINA -->
   <section class="pagina-hero">
     <div class="contenedor">
-      <p class="eyebrow">Tu selección</p>
-      <h1>Carrito</h1>
+      <p class="eyebrow" data-i18n="carrito.eyebrow">Tu selección</p>
+      <h1 data-i18n="carrito.titulo">Carrito</h1>
     </div>
   </section>
 
@@ -40,53 +45,47 @@
 
     <!-- LISTA DE PRODUCTOS -->
     <main class="carrito-main">
-
-      <!-- Estado vacío -->
       <div class="carrito-vacio" id="carrito-vacio">
-        <p>Tu carrito está vacío.</p>
-        <a href="catalogo.html" class="boton-principal">Ver catálogo</a>
+        <p data-i18n="carrito.vacio">Tu carrito está vacío.</p>
+        <a href="catalogo.html" class="boton-principal" data-i18n="carrito.ver_catalogo">Ver catálogo</a>
       </div>
-
-      <!-- Lista de productos (se rellena con JS) -->
       <div id="lista-carrito"></div>
-
     </main>
 
     <!-- RESUMEN Y PAGO -->
     <aside class="carrito-resumen" id="carrito-resumen">
-      <h2>Resumen del pedido</h2>
+      <h2 data-i18n="carrito.resumen">Resumen del pedido</h2>
 
       <div class="resumen-linea">
-        <span>Subtotal</span>
+        <span data-i18n="carrito.subtotal">Subtotal</span>
         <span id="subtotal">0,00 €</span>
       </div>
       <div class="resumen-linea">
-        <span>Envío</span>
-        <span id="envio">Gratis</span>
+        <span data-i18n="carrito.envio">Envío</span>
+        <span id="envio" data-i18n="carrito.gratis">Gratis</span>
       </div>
       <div class="resumen-linea resumen-total">
-        <span>Total</span>
+        <span data-i18n="carrito.total">Total</span>
         <span id="total">0,00 €</span>
       </div>
 
       <div class="pago-instrucciones">
-        <p class="pago-titulo">Cómo realizar el pago</p>
+        <p class="pago-titulo" data-i18n="carrito.como_pagar">Cómo realizar el pago</p>
         <div class="pago-opcion">
-          <p class="pago-metodo">Bizum</p>
+          <p class="pago-metodo" data-i18n="carrito.bizum">Bizum</p>
           <p>Envía el importe al número <strong>666 000 000</strong> indicando tu nombre y el número de pedido.</p>
         </div>
         <div class="pago-opcion">
-          <p class="pago-metodo">Transferencia bancaria</p>
-          <p>IBAN: <strong>ES12 3456 7890 1234 5678 9012</strong><br>Titular: Cuero & Arte S.L.</p>
+          <p class="pago-metodo" data-i18n="carrito.transferencia">Transferencia bancaria</p>
+          <p>IBAN: <strong>ES12 3456 7890 1234 5678 9012</strong><br>Titular: Antika</p>
         </div>
-        <p class="pago-nota">Una vez confirmado el pago, recibirás un email de confirmación en un plazo de 24h.</p>
+        <p class="pago-nota" data-i18n="carrito.nota_pago">Una vez confirmado el pago, recibirás un email de confirmación en un plazo de 24h.</p>
       </div>
 
-      <button class="boton-principal boton-confirmar" onclick="confirmarPedido()">
+      <button class="boton-principal boton-confirmar" onclick="confirmarPedido()" data-i18n="carrito.confirmar">
         Confirmar pedido
       </button>
-
-      <a href="catalogo.html" class="seguir-comprando">← Seguir comprando</a>
+      <a href="catalogo.html" class="seguir-comprando" data-i18n="carrito.seguir">← Seguir comprando</a>
     </aside>
 
   </div>
@@ -95,33 +94,33 @@
   <footer class="footer">
     <div class="contenedor footer-interior">
       <div class="footer-marca">
-        <img src="img/general/ANTIKA_logo_claro.svg" alt="Cuero & Arte" height="32">
-        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+        <img src="img/general/ANTIKA_logo_claro.svg" alt="Antika" height="32">
+        <p data-i18n="footer.descripcion">Artesanía en cuero y papel hecha a mano. Materiales naturales con origen trazable.</p>
       </div>
       <div class="footer-enlaces">
-        <h4>Tienda</h4>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="carrito.html">Carrito</a>
+        <h4 data-i18n="footer.tienda">Tienda</h4>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="carrito.html" data-i18n="nav.carrito">Carrito</a>
       </div>
       <div class="footer-enlaces">
-        <h4>Información</h4>
-        <a href="contacto.html">Contacto</a>
-        <a href="#">Envíos y devoluciones</a>
-        <a href="#">Aviso legal</a>
+        <h4 data-i18n="footer.informacion">Información</h4>
+        <a href="contacto.html" data-i18n="footer.envios">Envíos y devoluciones</a>
+        <a href="#" data-i18n="footer.aviso">Aviso legal</a>
       </div>
       <div class="footer-contacto">
-        <h4>Pedidos</h4>
+        <h4 data-i18n="footer.pedidos">Pedidos</h4>
         <p>Bizum: <strong>666 000 000</strong></p>
-        <p>info@cueroyarte.es</p>
+        <p>info@antika.es</p>
       </div>
     </div>
     <div class="footer-copy">
-      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+      <p>© 2026 Antika · <span data-i18n="footer.derechos">Todos los derechos reservados</span></p>
     </div>
   </footer>
 
   <script src="js/carrito.js"></script>
   <script src="js/carrito-pagina.js"></script>
+  <script src="js/idiomas.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

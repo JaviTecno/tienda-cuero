@@ -38,10 +38,6 @@
     "filtrar": "Filtrar",
     "categoria": "Categoría",
     "todos": "Todos los productos",
-    "carteras": "Carteras",
-    "cinturones": "Cinturones",
-    "bolsos": "Bolsos",
-    "accesorios": "Accesorios",
     "precio": "Precio",
     "todos_precios": "Todos los precios",
     "hasta_50": "Hasta 50 €",
@@ -52,7 +48,12 @@
     "precio_asc": "Precio: menor a mayor",
     "precio_desc": "Precio: mayor a menor",
     "nombre_az": "Nombre A–Z",
-    "sin_resultados": "No hay productos en esta categoría."
+    "sin_resultados": "No hay productos en esta categoría.",
+    "fundas": "Fundas de cuaderno",
+    "carpetas": "Carpetas",
+    "libretas": "Libretas",
+    "cajas": "Cajas",
+    "recambios": "Recambios"
   },
   "producto": {
     "eyebrow_carteras": "Carteras",

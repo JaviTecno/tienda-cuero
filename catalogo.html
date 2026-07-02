@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo — Artesanía en Cuero</title>
+  <title>Catálogo — Antika</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/catalogo.css">
@@ -14,24 +14,29 @@
   <header class="cabecera">
     <div class="cabecera-interior">
       <a href="index.html">
-        <img src="img/general/ANTIKA_logo.svg" alt="Cuero & Arte" height="40">
+        <img src="img/general/ANTIKA_logo.svg" alt="Antika" height="40">
       </a>
       <nav class="navegacion">
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         <a href="carrito.html" class="icono-carrito">
-          Carrito (<span id="contador-carrito">0</span>)
+          <span data-i18n="nav.carrito">Carrito</span> (<span id="contador-carrito">0</span>)
         </a>
       </nav>
+      <div class="selector-idioma">
+        <button class="idioma-btn" data-idioma="es" onclick="cambiarIdioma('es')">ES</button>
+        <button class="idioma-btn" data-idioma="gl" onclick="cambiarIdioma('gl')">GL</button>
+        <button class="idioma-btn" data-idioma="en" onclick="cambiarIdioma('en')">EN</button>
+      </div>
     </div>
   </header>
 
   <!-- CABECERA DE PÁGINA -->
   <section class="pagina-hero">
     <div class="contenedor">
-      <p class="eyebrow">Hecho a mano · Cuero natural</p>
-      <h1>Catálogo</h1>
+      <p class="eyebrow" data-i18n="catalogo.eyebrow">Hecho a mano · Cuero y papel natural</p>
+      <h1 data-i18n="catalogo.titulo">Catálogo</h1>
     </div>
   </section>
 
@@ -40,211 +45,197 @@
 
     <!-- SIDEBAR DE FILTROS -->
     <aside class="sidebar-filtros">
-      <h2>Filtrar</h2>
+      <h2 data-i18n="catalogo.filtrar">Filtrar</h2>
 
       <div class="grupo-filtro">
-        <h3>Categoría</h3>
+        <h3 data-i18n="catalogo.categoria">Categoría</h3>
         <label class="filtro-opcion">
           <input type="radio" name="categoria" value="todos" checked>
-          <span>Todos los productos</span>
+          <span data-i18n="catalogo.todos">Todos los productos</span>
         </label>
         <label class="filtro-opcion">
-          <input type="radio" name="categoria" value="carteras">
-          <span>Carteras</span>
+          <input type="radio" name="categoria" value="fundas">
+          <span data-i18n="catalogo.fundas">Fundas de cuaderno</span>
         </label>
         <label class="filtro-opcion">
-          <input type="radio" name="categoria" value="cinturones">
-          <span>Cinturones</span>
+          <input type="radio" name="categoria" value="carpetas">
+          <span data-i18n="catalogo.carpetas">Carpetas</span>
         </label>
         <label class="filtro-opcion">
-          <input type="radio" name="categoria" value="bolsos">
-          <span>Bolsos</span>
+          <input type="radio" name="categoria" value="libretas">
+          <span data-i18n="catalogo.libretas">Libretas</span>
         </label>
         <label class="filtro-opcion">
-          <input type="radio" name="categoria" value="accesorios">
-          <span>Accesorios</span>
+          <input type="radio" name="categoria" value="cajas">
+          <span data-i18n="catalogo.cajas">Cajas</span>
+        </label>
+        <label class="filtro-opcion">
+          <input type="radio" name="categoria" value="recambios">
+          <span data-i18n="catalogo.recambios">Recambios</span>
         </label>
       </div>
 
       <div class="grupo-filtro">
-        <h3>Precio</h3>
+        <h3 data-i18n="catalogo.precio">Precio</h3>
         <label class="filtro-opcion">
           <input type="radio" name="precio" value="todos" checked>
-          <span>Todos los precios</span>
+          <span data-i18n="catalogo.todos_precios">Todos los precios</span>
         </label>
         <label class="filtro-opcion">
           <input type="radio" name="precio" value="0-50">
-          <span>Hasta 50 €</span>
+          <span data-i18n="catalogo.hasta_50">Hasta 50 €</span>
         </label>
         <label class="filtro-opcion">
           <input type="radio" name="precio" value="50-100">
-          <span>50 € — 100 €</span>
+          <span data-i18n="catalogo.50_100">50 € — 100 €</span>
         </label>
         <label class="filtro-opcion">
           <input type="radio" name="precio" value="100+">
-          <span>Más de 100 €</span>
+          <span data-i18n="catalogo.mas_100">Más de 100 €</span>
         </label>
       </div>
 
-      <button class="boton-limpiar" onclick="limpiarFiltros()">Limpiar filtros</button>
+      <button class="boton-limpiar" onclick="limpiarFiltros()" data-i18n="catalogo.limpiar">Limpiar filtros</button>
     </aside>
 
     <!-- CUADRÍCULA DE PRODUCTOS -->
     <main class="catalogo-main">
 
       <div class="catalogo-barra">
-        <p class="catalogo-resultado"><span id="num-productos">8</span> productos</p>
+        <p class="catalogo-resultado"><span id="num-productos">7</span> productos</p>
         <select class="catalogo-orden" onchange="ordenarProductos(this.value)">
-          <option value="defecto">Orden por defecto</option>
-          <option value="precio-asc">Precio: menor a mayor</option>
-          <option value="precio-desc">Precio: mayor a menor</option>
-          <option value="nombre">Nombre A–Z</option>
+          <option value="defecto" data-i18n="catalogo.orden_defecto">Orden por defecto</option>
+          <option value="precio-asc" data-i18n="catalogo.precio_asc">Precio: menor a mayor</option>
+          <option value="precio-desc" data-i18n="catalogo.precio_desc">Precio: mayor a menor</option>
+          <option value="nombre" data-i18n="catalogo.nombre_az">Nombre A–Z</option>
         </select>
       </div>
 
       <div class="cuadricula-productos" id="cuadricula">
 
-        <article class="tarjeta-producto" data-categoria="carteras" data-precio="45">
+        <article class="tarjeta-producto" data-categoria="fundas" data-precio="45">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-1.jpg" alt="Cartera clásica" onerror="this.style.background='#C4A882'">
+              <img src="img/productos/funda-basica.jpg" alt="Funda de cuaderno básica" onerror="this.style.background='#C4A882'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Carteras</p>
-            <h3><a href="producto.html">Cartera clásica</a></h3>
-            <p class="tarjeta-descripcion">Cuero vacuno curtido al vegetal. Interior con 6 compartimentos para tarjetas.</p>
+            <p class="tarjeta-categoria" data-i18n="catalogo.fundas">Fundas de cuaderno</p>
+            <h3><a href="producto.html">Funda de cuaderno</a></h3>
+            <p class="tarjeta-descripcion">Cuero curtido al vegetal, cantos bruñidos a mano. Compatible con recambios Antika.</p>
             <div class="tarjeta-pie">
               <span class="precio">45,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Cartera clásica', 45)">Añadir</button>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Funda de cuaderno', 45)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
 
-        <article class="tarjeta-producto" data-categoria="cinturones" data-precio="65">
+        <article class="tarjeta-producto" data-categoria="fundas" data-precio="95">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-2.jpg" alt="Cinturón artesanal" onerror="this.style.background='#8B6F47'">
+              <img src="img/productos/funda-lujo.jpg" alt="Funda de cuaderno lujo" onerror="this.style.background='#8B6F47'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Cinturones</p>
-            <h3><a href="producto.html">Cinturón artesanal</a></h3>
-            <p class="tarjeta-descripcion">Cuero de 4mm de grosor. Hebilla de latón. Disponible en varios colores.</p>
-            <div class="tarjeta-pie">
-              <span class="precio">65,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón artesanal', 65)">Añadir</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="tarjeta-producto" data-categoria="bolsos" data-precio="120">
-          <a href="producto.html">
-            <div class="tarjeta-imagen">
-              <img src="img/productos/producto-3.jpg" alt="Bolso tote" onerror="this.style.background='#6B4F3A'">
-            </div>
-          </a>
-          <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Bolsos</p>
-            <h3><a href="producto.html">Bolso tote</a></h3>
-            <p class="tarjeta-descripcion">Amplio y resistente. Cosido a mano con hilo encerado. Asa larga y corta.</p>
-            <div class="tarjeta-pie">
-              <span class="precio">120,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Bolso tote', 120)">Añadir</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="tarjeta-producto" data-categoria="accesorios" data-precio="38">
-          <a href="producto.html">
-            <div class="tarjeta-imagen">
-              <img src="img/productos/producto-4.jpg" alt="Funda cuaderno" onerror="this.style.background='#A07850'">
-            </div>
-          </a>
-          <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Accesorios</p>
-            <h3><a href="producto.html">Funda cuaderno A5</a></h3>
-            <p class="tarjeta-descripcion">Protege tu cuaderno con estilo. Con bolsillo interior y cierre de botón.</p>
-            <div class="tarjeta-pie">
-              <span class="precio">38,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Funda cuaderno A5', 38)">Añadir</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="tarjeta-producto" data-categoria="carteras" data-precio="55">
-          <a href="producto.html">
-            <div class="tarjeta-imagen">
-              <img src="img/productos/producto-5.jpg" alt="Tarjetero" onerror="this.style.background='#B8936A'">
-            </div>
-          </a>
-          <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Carteras</p>
-            <h3><a href="producto.html">Tarjetero slim</a></h3>
-            <p class="tarjeta-descripcion">Minimalista y elegante. Cabe en cualquier bolsillo. Hasta 8 tarjetas.</p>
-            <div class="tarjeta-pie">
-              <span class="precio">55,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Tarjetero slim', 55)">Añadir</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="tarjeta-producto" data-categoria="bolsos" data-precio="95">
-          <a href="producto.html">
-            <div class="tarjeta-imagen">
-              <img src="img/productos/producto-6.jpg" alt="Bolso bandolera" onerror="this.style.background='#7A5C3E'">
-            </div>
-          </a>
-          <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Bolsos</p>
-            <h3><a href="producto.html">Bandolera pequeña</a></h3>
-            <p class="tarjeta-descripcion">Compacta y versátil. Correa regulable. Cierre con hebilla de latón.</p>
+            <p class="tarjeta-categoria" data-i18n="catalogo.fundas">Fundas de cuaderno</p>
+            <h3><a href="producto.html">Funda de cuaderno — Lujo</a></h3>
+            <p class="tarjeta-descripcion">Portada labrada, forro interior y bolsillos. Cuero de primera selección curtido al vegetal.</p>
             <div class="tarjeta-pie">
               <span class="precio">95,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Bandolera pequeña', 95)">Añadir</button>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Funda de cuaderno lujo', 95)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
 
-        <article class="tarjeta-producto" data-categoria="accesorios" data-precio="28">
+        <article class="tarjeta-producto" data-categoria="carpetas" data-precio="120">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-7.jpg" alt="Llavero" onerror="this.style.background='#C9A87C'">
+              <img src="img/productos/carpeta.jpg" alt="Carpeta de cuero" onerror="this.style.background='#6B4F3A'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Accesorios</p>
-            <h3><a href="producto.html">Llavero artesanal</a></h3>
-            <p class="tarjeta-descripcion">Pequeño detalle, gran calidad. Cuero grueso con anilla de acero inoxidable.</p>
+            <p class="tarjeta-categoria" data-i18n="catalogo.carpetas">Carpetas</p>
+            <h3><a href="producto.html">Carpeta</a></h3>
+            <p class="tarjeta-descripcion">Gama alta. Portada labrada, forro interior y bolsillos. Pieza única de taller.</p>
             <div class="tarjeta-pie">
-              <span class="precio">28,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Llavero artesanal', 28)">Añadir</button>
+              <span class="precio">120,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Carpeta', 120)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
 
-        <article class="tarjeta-producto" data-categoria="cinturones" data-precio="78">
+        <article class="tarjeta-producto" data-categoria="libretas" data-precio="22">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-8.jpg" alt="Cinturón trenzado" onerror="this.style.background='#9B7355'">
+              <img src="img/productos/libreta-basica.jpg" alt="Libreta básica" onerror="this.style.background='#A07850'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Cinturones</p>
-            <h3><a href="producto.html">Cinturón trenzado</a></h3>
-            <p class="tarjeta-descripcion">Técnica de trenzado hecha a mano. Resistente y con carácter propio.</p>
+            <p class="tarjeta-categoria" data-i18n="catalogo.libretas">Libretas</p>
+            <h3><a href="producto.html">Libreta encuadernada</a></h3>
+            <p class="tarjeta-descripcion">Encuadernación artesanal cosida a mano. Papel de calidad, tapa resistente.</p>
             <div class="tarjeta-pie">
-              <span class="precio">78,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón trenzado', 78)">Añadir</button>
+              <span class="precio">22,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Libreta encuadernada', 22)" data-i18n="productos.boton_añadir">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="libretas" data-precio="38">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/libreta-premium.jpg" alt="Libreta premium" onerror="this.style.background='#B8936A'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria" data-i18n="catalogo.libretas">Libretas</p>
+            <h3><a href="producto.html">Libreta premium</a></h3>
+            <p class="tarjeta-descripcion">Papel de algodón 100%, encuadernación artesanal cosida a mano. Para escribir y dibujar.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">38,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Libreta premium', 38)" data-i18n="productos.boton_añadir">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="cajas" data-precio="35">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/caja.jpg" alt="Caja encuadernada" onerror="this.style.background='#7A5C3E'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria" data-i18n="catalogo.cajas">Cajas</p>
+            <h3><a href="producto.html">Caja encuadernada</a></h3>
+            <p class="tarjeta-descripcion">Cartonaje artesanal. Para guardar cartas, fotografías o como caja de regalo.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">35,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Caja encuadernada', 35)" data-i18n="productos.boton_añadir">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta-producto" data-categoria="recambios" data-precio="12">
+          <a href="producto.html">
+            <div class="tarjeta-imagen">
+              <img src="img/productos/recambio.jpg" alt="Cuaderno de recambio" onerror="this.style.background='#C9A87C'">
+            </div>
+          </a>
+          <div class="tarjeta-info">
+            <p class="tarjeta-categoria" data-i18n="catalogo.recambios">Recambios</p>
+            <h3><a href="producto.html">Cuaderno de recambio</a></h3>
+            <p class="tarjeta-descripcion">Papel sin encuadernar, compatible con fundas Antika. Papel reciclado FSC.</p>
+            <div class="tarjeta-pie">
+              <span class="precio">12,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cuaderno de recambio', 12)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
 
       </div>
 
-      <!-- Mensaje cuando no hay resultados -->
       <div class="sin-resultados" id="sin-resultados" style="display:none;">
-        <p>No hay productos en esta categoría.</p>
+        <p data-i18n="catalogo.sin_resultados">No hay productos en esta categoría.</p>
       </div>
 
     </main>
@@ -254,33 +245,33 @@
   <footer class="footer">
     <div class="contenedor footer-interior">
       <div class="footer-marca">
-        <img src="img/general/ANTIKA_logo_claro.svg" alt="Cuero & Arte" height="32">
-        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+        <img src="img/general/ANTIKA_logo_claro.svg" alt="Antika" height="32">
+        <p data-i18n="footer.descripcion">Artesanía en cuero y papel hecha a mano. Materiales naturales con origen trazable.</p>
       </div>
       <div class="footer-enlaces">
-        <h4>Tienda</h4>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="carrito.html">Carrito</a>
+        <h4 data-i18n="footer.tienda">Tienda</h4>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="carrito.html" data-i18n="nav.carrito">Carrito</a>
       </div>
       <div class="footer-enlaces">
-        <h4>Información</h4>
-        <a href="contacto.html">Contacto</a>
-        <a href="#">Envíos y devoluciones</a>
-        <a href="#">Aviso legal</a>
+        <h4 data-i18n="footer.informacion">Información</h4>
+        <a href="contacto.html" data-i18n="footer.envios">Envíos y devoluciones</a>
+        <a href="#" data-i18n="footer.aviso">Aviso legal</a>
       </div>
       <div class="footer-contacto">
-        <h4>Pedidos</h4>
+        <h4 data-i18n="footer.pedidos">Pedidos</h4>
         <p>Bizum: <strong>666 000 000</strong></p>
-        <p>info@cueroyarte.es</p>
+        <p>info@antika.es</p>
       </div>
     </div>
     <div class="footer-copy">
-      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+      <p>© 2026 Antika · <span data-i18n="footer.derechos">Todos los derechos reservados</span></p>
     </div>
   </footer>
 
   <script src="js/carrito.js"></script>
   <script src="js/catalogo.js"></script>
+  <script src="js/idiomas.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

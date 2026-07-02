@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartera clásica — Artesanía en Cuero</title>
+  <title>Funda de cuaderno — Antika</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/producto.css">
@@ -14,27 +14,32 @@
   <header class="cabecera">
     <div class="cabecera-interior">
       <a href="index.html">
-        <img src="img/general/ANTIKA_logo.svg" alt="Cuero & Arte" height="40">
+        <img src="img/general/ANTIKA_logo.svg" alt="Antika" height="40">
       </a>
       <nav class="navegacion">
-        <a href="index.html">Inicio</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         <a href="carrito.html" class="icono-carrito">
-          Carrito (<span id="contador-carrito">0</span>)
+          <span data-i18n="nav.carrito">Carrito</span> (<span id="contador-carrito">0</span>)
         </a>
       </nav>
+      <div class="selector-idioma">
+        <button class="idioma-btn" data-idioma="es" onclick="cambiarIdioma('es')">ES</button>
+        <button class="idioma-btn" data-idioma="gl" onclick="cambiarIdioma('gl')">GL</button>
+        <button class="idioma-btn" data-idioma="en" onclick="cambiarIdioma('en')">EN</button>
+      </div>
     </div>
   </header>
 
   <!-- MIGAS DE PAN -->
   <div class="migas">
     <div class="contenedor">
-      <a href="index.html">Inicio</a>
+      <a href="index.html" data-i18n="migas.inicio">Inicio</a>
       <span>›</span>
-      <a href="catalogo.html">Catálogo</a>
+      <a href="catalogo.html" data-i18n="migas.catalogo">Catálogo</a>
       <span>›</span>
-      <span>Cartera clásica</span>
+      <span>Funda de cuaderno</span>
     </div>
   </div>
 
@@ -44,16 +49,16 @@
     <!-- GALERÍA DE IMÁGENES -->
     <div class="galeria">
       <div class="galeria-principal">
-        <img id="imagen-principal" src="img/productos/producto-1.jpg" alt="Cartera clásica" onerror="this.style.background='#C4A882'; this.style.minHeight='400px'">
+        <img id="imagen-principal" src="img/productos/funda-basica.jpg" alt="Funda de cuaderno" onerror="this.style.background='#C4A882'; this.style.minHeight='400px'">
       </div>
       <div class="galeria-miniaturas">
-        <div class="miniatura activa" onclick="cambiarImagen(this, 'img/productos/producto-1.jpg')">
+        <div class="miniatura activa" onclick="cambiarImagen(this, 'img/productos/funda-basica.jpg')">
           <div class="miniatura-placeholder" style="background:#C4A882"></div>
         </div>
-        <div class="miniatura" onclick="cambiarImagen(this, 'img/productos/producto-1b.jpg')">
+        <div class="miniatura" onclick="cambiarImagen(this, 'img/productos/funda-basica-b.jpg')">
           <div class="miniatura-placeholder" style="background:#A07850"></div>
         </div>
-        <div class="miniatura" onclick="cambiarImagen(this, 'img/productos/producto-1c.jpg')">
+        <div class="miniatura" onclick="cambiarImagen(this, 'img/productos/funda-basica-c.jpg')">
           <div class="miniatura-placeholder" style="background:#8B6344"></div>
         </div>
       </div>
@@ -61,20 +66,20 @@
 
     <!-- INFORMACIÓN DEL PRODUCTO -->
     <div class="producto-info">
-      <p class="producto-categoria">Carteras</p>
-      <h1 class="producto-nombre">Cartera clásica</h1>
+      <p class="producto-categoria" data-i18n="catalogo.fundas">Fundas de cuaderno</p>
+      <h1 class="producto-nombre">Funda de cuaderno</h1>
       <p class="producto-precio">45,00 €</p>
 
       <p class="producto-descripcion">
-        Cartera de cuero vacuno curtido al vegetal. Fabricada a mano con técnicas tradicionales. El cuero natural mejora con el uso y desarrolla una pátina única con el tiempo.
+        Funda de cuero curtido al vegetal, trabajada a mano con técnicas tradicionales. Cantos bruñidos a mano. Compatible con cuadernos de recambio Antika. El cuero natural mejora con el uso y desarrolla una pátina única con el tiempo.
       </p>
 
       <!-- SELECTOR DE COLOR -->
       <div class="selector-grupo">
-        <p class="selector-etiqueta">Color: <strong id="color-seleccionado">Marrón natural</strong></p>
+        <p class="selector-etiqueta"><span data-i18n="producto.color">Color</span>: <strong id="color-seleccionado">Natural</strong></p>
         <div class="colores">
-          <button class="color-opcion activo" style="background:#8B6344" title="Marrón natural"
-            onclick="seleccionarColor(this, 'Marrón natural')"></button>
+          <button class="color-opcion activo" style="background:#8B6344" title="Natural"
+            onclick="seleccionarColor(this, 'Natural')"></button>
           <button class="color-opcion" style="background:#2C2C2C" title="Negro"
             onclick="seleccionarColor(this, 'Negro')"></button>
           <button class="color-opcion" style="background:#6B3A2A" title="Burdeos"
@@ -84,7 +89,7 @@
 
       <!-- SELECTOR DE CANTIDAD -->
       <div class="selector-grupo">
-        <p class="selector-etiqueta">Cantidad</p>
+        <p class="selector-etiqueta" data-i18n="producto.cantidad">Cantidad</p>
         <div class="cantidad-control">
           <button onclick="cambiarCantidad(-1)">−</button>
           <span id="cantidad">1</span>
@@ -93,27 +98,27 @@
       </div>
 
       <!-- BOTÓN AÑADIR AL CARRITO -->
-      <button class="boton-principal boton-comprar" onclick="añadirProducto()">
+      <button class="boton-principal boton-comprar" onclick="añadirProducto()" data-i18n="producto.añadir_carrito">
         Añadir al carrito
       </button>
 
       <!-- DETALLES -->
       <div class="producto-detalles">
         <details class="detalle-item">
-          <summary>Materiales</summary>
-          <p>Cuero vacuno curtido al vegetal de origen europeo. Hilo encerado 100% algodón. Hebillas de latón macizo.</p>
+          <summary data-i18n="producto.materiales">Materiales</summary>
+          <p>Cuero curtido al vegetal de origen europeo. Hilo de lino encerado. Cantos bruñidos a mano. Sin adhesivos ni acabados sintéticos.</p>
         </details>
         <details class="detalle-item">
-          <summary>Dimensiones</summary>
-          <p>19 cm × 9,5 cm cerrada. Grosor: 1,5 cm. Peso: 85 g.</p>
+          <summary data-i18n="producto.dimensiones">Dimensiones</summary>
+          <p>Compatible con formato A5. Se adapta a cuadernos de hasta 15 mm de grosor. Peso: 120 g.</p>
         </details>
         <details class="detalle-item">
-          <summary>Envíos y devoluciones</summary>
+          <summary data-i18n="producto.envios">Envíos y devoluciones</summary>
           <p>Envío en 3–5 días laborables. Devoluciones aceptadas en 14 días desde la recepción del pedido.</p>
         </details>
         <details class="detalle-item">
-          <summary>Cuidados</summary>
-          <p>Aplicar cera de cuero cada 6 meses. Evitar la humedad prolongada. El cuero natural patina con el uso — eso es buena señal.</p>
+          <summary data-i18n="producto.cuidados">Cuidados</summary>
+          <p>Aplicar cera de cuero natural cada 6 meses. Evitar la humedad prolongada. El cuero curtido al vegetal patina con el uso — es señal de calidad, no de desgaste.</p>
         </details>
       </div>
     </div>
@@ -123,21 +128,21 @@
   <!-- PRODUCTOS RELACIONADOS -->
   <section class="seccion-relacionados">
     <div class="contenedor">
-      <h2 class="seccion-titulo">También te puede gustar</h2>
+      <h2 class="seccion-titulo" data-i18n="producto.relacionados">También te puede gustar</h2>
       <div class="cuadricula-productos cuadricula-3">
 
         <article class="tarjeta-producto">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-5.jpg" alt="Tarjetero slim" onerror="this.style.background='#B8936A'">
+              <img src="img/productos/funda-lujo.jpg" alt="Funda de cuaderno lujo" onerror="this.style.background='#8B6F47'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Carteras</p>
-            <h3><a href="producto.html">Tarjetero slim</a></h3>
+            <p class="tarjeta-categoria" data-i18n="catalogo.fundas">Fundas de cuaderno</p>
+            <h3><a href="producto.html">Funda de cuaderno — Lujo</a></h3>
             <div class="tarjeta-pie">
-              <span class="precio">55,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Tarjetero slim', 55)">Añadir</button>
+              <span class="precio">95,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Funda de cuaderno lujo', 95)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
@@ -145,15 +150,15 @@
         <article class="tarjeta-producto">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-2.jpg" alt="Cinturón artesanal" onerror="this.style.background='#8B6F47'">
+              <img src="img/productos/libreta-premium.jpg" alt="Libreta premium" onerror="this.style.background='#6B4F3A'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Cinturones</p>
-            <h3><a href="producto.html">Cinturón artesanal</a></h3>
+            <p class="tarjeta-categoria" data-i18n="catalogo.libretas">Libretas</p>
+            <h3><a href="producto.html">Libreta premium</a></h3>
             <div class="tarjeta-pie">
-              <span class="precio">65,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Cinturón artesanal', 65)">Añadir</button>
+              <span class="precio">38,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Libreta premium', 38)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
@@ -161,15 +166,15 @@
         <article class="tarjeta-producto">
           <a href="producto.html">
             <div class="tarjeta-imagen">
-              <img src="img/productos/producto-7.jpg" alt="Llavero artesanal" onerror="this.style.background='#C9A87C'">
+              <img src="img/productos/recambio.jpg" alt="Cuaderno de recambio" onerror="this.style.background='#C9A87C'">
             </div>
           </a>
           <div class="tarjeta-info">
-            <p class="tarjeta-categoria">Accesorios</p>
-            <h3><a href="producto.html">Llavero artesanal</a></h3>
+            <p class="tarjeta-categoria" data-i18n="catalogo.recambios">Recambios</p>
+            <h3><a href="producto.html">Cuaderno de recambio</a></h3>
             <div class="tarjeta-pie">
-              <span class="precio">28,00 €</span>
-              <button class="boton-agregar" onclick="agregarAlCarrito('Llavero artesanal', 28)">Añadir</button>
+              <span class="precio">12,00 €</span>
+              <button class="boton-agregar" onclick="agregarAlCarrito('Cuaderno de recambio', 12)" data-i18n="productos.boton_añadir">Añadir</button>
             </div>
           </div>
         </article>
@@ -182,33 +187,33 @@
   <footer class="footer">
     <div class="contenedor footer-interior">
       <div class="footer-marca">
-        <img src="img/general/ANTIKA_logo_claro.svg" alt="Cuero & Arte" height="32">
-        <p>Artesanía en cuero hecha a mano.<br>Con materiales naturales de primera calidad.</p>
+        <img src="img/general/ANTIKA_logo_claro.svg" alt="Antika" height="32">
+        <p data-i18n="footer.descripcion">Artesanía en cuero y papel hecha a mano. Materiales naturales con origen trazable.</p>
       </div>
       <div class="footer-enlaces">
-        <h4>Tienda</h4>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="carrito.html">Carrito</a>
+        <h4 data-i18n="footer.tienda">Tienda</h4>
+        <a href="catalogo.html" data-i18n="nav.catalogo">Catálogo</a>
+        <a href="carrito.html" data-i18n="nav.carrito">Carrito</a>
       </div>
       <div class="footer-enlaces">
-        <h4>Información</h4>
-        <a href="contacto.html">Contacto</a>
-        <a href="#">Envíos y devoluciones</a>
-        <a href="#">Aviso legal</a>
+        <h4 data-i18n="footer.informacion">Información</h4>
+        <a href="contacto.html" data-i18n="footer.envios">Envíos y devoluciones</a>
+        <a href="#" data-i18n="footer.aviso">Aviso legal</a>
       </div>
       <div class="footer-contacto">
-        <h4>Pedidos</h4>
+        <h4 data-i18n="footer.pedidos">Pedidos</h4>
         <p>Bizum: <strong>666 000 000</strong></p>
-        <p>info@cueroyarte.es</p>
+        <p>info@antika.es</p>
       </div>
     </div>
     <div class="footer-copy">
-      <p>© 2026 Cuero & Arte · Todos los derechos reservados</p>
+      <p>© 2026 Antika · <span data-i18n="footer.derechos">Todos los derechos reservados</span></p>
     </div>
   </footer>
 
   <script src="js/carrito.js"></script>
   <script src="js/producto.js"></script>
+  <script src="js/idiomas.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
